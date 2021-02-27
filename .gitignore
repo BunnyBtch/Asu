@@ -1,0 +1,9 @@
+.vs
+.vscode
+clip_sounds
+deeprock_sounds
+hl1_sounds
+l4d2_sounds
+node_modules
+tf2_sounds
+config.json
