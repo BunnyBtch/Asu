@@ -3,7 +3,7 @@
 const Discord = require('discord.js');
 const Util = require('minecraft-server-util');
 const fs = require('fs');
-const {prefix, token, youtubeKey, MainDC, sv_minecraft} = require('./config.json');
+const {prefix, token, youtubeKey, MainDC, SecondDC, sv_minecraft} = require('./config.json');
 
 const Client = new Discord.Client;
 const Guild = new Discord.Guild;
@@ -30,7 +30,7 @@ Client.on('message', async msg => {
 
 
     //Special Commands
-    if((commandName == 'minecraft' || commandName == 'mc') && (msg.channel.guild == MainDC) ){
+    if((commandName == 'minecraft' || commandName == 'mc') && ((msg.channel.guild == MainDC) || (msg.channel.guild == SecondDC))){
         Util.status(sv_minecraft)
         .then((Response) =>{
             msg.channel.send(`
