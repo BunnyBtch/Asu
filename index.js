@@ -30,7 +30,7 @@ Client.on('message', async msg => {
 
 
     //Special Commands
-    if((commandName == 'minecraft' || commandName == 'mc') && ((msg.channel.guild == MainDC) || (msg.channel.guild == SecondDC))){
+    if((commandName == 'minecraft' || commandName == 'mc') && (msg.channel.guild == MainDC || msg.channel.guild == SecondDC)){
         Util.status(sv_minecraft)
         .then((Response) =>{
             msg.channel.send(`
